@@ -54,7 +54,7 @@ echo "<br>";
 
 //関数の基礎
 // 関数の定義
-function sayHello()
+/*function sayHello()
 {
     echo "こんにちは！<br>";
 }
@@ -72,7 +72,7 @@ function sayHelloTo($name)
 sayHelloTo("山田"); // "こんにちは、山田さん！" が出力される
 sayHelloTo("佐藤"); // "こんにちは、佐藤さん！" が出力される
 // 2つの数値を受け取り、その合計を返す関数
-function add($a, $b)
+/*function add($a, $b)
 {
     $sum = $a + $b;
     return $sum; // 計算結果を返す
@@ -91,7 +91,45 @@ function testReturn()
     echo "この行は実行されません";
 }
 
-echo testReturn();
+echo testReturn();*/
+
+//引数の型宣言と戻り値の型宣言
+// 引数 $a と $b は、必ず整数(int)でなければならない、と宣言
+/*function add(int $a, int $b)
+{
+    return $a + $b;
+}
+
+// OK: 整数を渡している
+echo add(3, 5); // 8
+*/
+// 戻り値は、必ず整数(int)でなければならない、と宣言
+/*function add(int $a, int $b): int
+{
+    return $a + $b;
+}
+
+// OK: 整数を返す
+$result = add(3, 5);
+echo $result; // 8
+// 戻り値の型が違う関数;
+function add_and_format(int $a, int $b): int
+{
+
+    $sum = $a + $b;
+
+    // NG: 文字列を返そうとすると、TypeErrorが発生する
+    return "合計は: " . $sum; // Fatal error: Uncaught TypeError: ...
+}
+echo add_and_format(3, 5);*/
+/*function sayHello(string $name): void
+{
+    echo "こんにちは、" . $name . "さん！";
+    // return は書かない
+}
+
+sayHello("鈴木");
+*/
 
 ?>
 </body>
