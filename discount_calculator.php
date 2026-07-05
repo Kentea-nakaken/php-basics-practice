@@ -50,6 +50,49 @@ echo "ダメージ後: {$score}点<br>";
 
 $score *= 2;   // 2倍アイテム
 echo "最終スコア: {$score}点<br>";
+echo "<br>";
+
+//関数の基礎
+// 関数の定義
+function sayHello()
+{
+    echo "こんにちは！<br>";
+}
+
+// 関数の呼び出し
+sayHello(); // "こんにちは！" が出力される
+sayHello(); // もう一度呼び出せる
+// 引数 $name を受け取る関数
+function sayHelloTo($name)
+{
+    echo "こんにちは、" . $name . "さん！<br>";
+}
+
+// 関数を呼び出す際に、引数を渡す
+sayHelloTo("山田"); // "こんにちは、山田さん！" が出力される
+sayHelloTo("佐藤"); // "こんにちは、佐藤さん！" が出力される
+// 2つの数値を受け取り、その合計を返す関数
+function add($a, $b)
+{
+    $sum = $a + $b;
+    return $sum; // 計算結果を返す
+}
+
+// 関数の戻り値を、変数 $result に代入する
+$result = add(3, 5);
+
+echo $result; // "8" が出力される
+
+echo add(10, 20); // "30" が出力される
+
+function testReturn()
+{
+    return "ここで処理は終わり";
+    echo "この行は実行されません";
+}
+
+echo testReturn();
+
 ?>
 </body>
 </html>
