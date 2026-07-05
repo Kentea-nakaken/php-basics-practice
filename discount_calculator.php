@@ -131,6 +131,47 @@ echo add_and_format(3, 5);*/
 sayHello("鈴木");
 */
 
+//条件分岐
+/*$age = 20;
+
+if ($age >= 18) {
+    echo "あなたは、成人です。";
+} else {
+    echo "あなたは、未成年です。";
+}*/
+
+/*$score = 85;
+
+if ($score >= 90) {
+    echo "評価はAです。";
+} elseif ($score >= 80) {
+    echo "評価はBです。";
+} elseif ($score >= 60) {
+    echo "評価はCです。";
+} else {
+    echo "評価はDです（不合格）。";
+}*/
+
+/*$signal = "blue";
+
+switch ($signal) {
+    case "red":
+        echo "止まれ";
+        break; // breakを忘れない！
+
+    case "yellow":
+        echo "注意";
+        break;
+
+    case "blue":
+    case "green": // 複数のケースをまとめることも可能
+        echo "進め";
+        break;
+
+    default: // どのケースにも当てはまらない場合
+        echo "信号の色ではありません";
+        break;
+}*/
 ?>
 </body>
 </html>
