@@ -206,7 +206,7 @@ foreach ($scores as $subject => $score) {
 }*/
 
 // 1から10までループするが、5を見つけたら中断する
-for ($i = 1; $i <= 10; $i++) {
+/*for ($i = 1; $i <= 10; $i++) {
     if ($i === 5) {
         break; // ループを抜ける
     }
@@ -220,9 +220,101 @@ for ($i = 1; $i <= 10; $i++) {
         continue; // 次のループへ
     }
     echo $i . ", ";
-}
+}*/
 // 出力: 1, 3, 5, 7, 9
 
+//配列操作
+/*/ おさらい: 要素へのアクセス
+/$fruits = ['りんご', 'バナナ', 'みかん'];
+echo $fruits[0] . "<br>"; // "りんご"（インデックスは0から始まる）
+
+$user = ['name' => '山田', 'age' => 30];
+echo $user['name'] . "<br>"; // "山田"*/
+
+/*$fruits = ['りんご', 'バナナ'];
+
+// 末尾に要素を追加
+$fruits[] = 'みかん';
+$fruits[] = 'ぶどう';
+
+print_r($fruits);
+// 出力: Array ( [0] => りんご [1] => バナナ [2] => みかん [3] => ぶどう )
+$user = [
+    'name' => '山田 太郎',
+];
+
+// 新しいキーで要素を追加
+$user['age'] = 30;
+$user['email'] = 'yamada@example.com';
+
+print_r($user);
+// 出力: Array ( [name] => 山田 太郎 [age] => 30 [email] => yamada@example.com )*/
+
+$fruits = ['りんご', 'バナナ', 'みかん'];
+
+// キー1の要素を更新（バナナ → ぶどう）
+/*$fruits[1] = 'ぶどう';
+
+print_r($fruits);
+// 出力: Array ( [0] => りんご [1] => ぶどう [2] => みかん )
+$user = ['name' => '山田', 'age' => 30];
+
+// 年齢を更新
+$user['age'] = 31;
+
+echo $user['age']; // 31*/
+
+$fruits = ['りんご', 'バナナ', 'みかん'];
+
+// キー1の要素（バナナ）を削除
+/*unset($fruits[1]);
+
+print_r($fruits);
+// 出力: Array ( [0] => りんご [2] => みかん )
+$fruits = ['りんご', 'バナナ', 'みかん'];
+unset($fruits[1]);
+
+// インデックスを詰め直す
+$fruits = array_values($fruits);
+
+print_r($fruits);
+// 出力: Array ( [0] => りんご [1] => みかん )*/
+//$user = ['name' => '山田', 'age' => 30];
+//var_dump($user);
+// 出力:
+// array(2) {
+//   ["name"]=> string(6) "山田"
+//   ["age"]=> int(30)
+// }
+
+//二次元配列
+$users = [
+    ['name' => '山田', 'age' => 30],
+    ['name' => '佐藤', 'age' => 25],
+    ['name' => '鈴木', 'age' => 35],
+];
+
+// ユーザー情報の配列をループ処理
+foreach ($users as $user) {
+    echo '名前: ' . $user['name'] . '、年齢: ' . $user['age'] . '歳<br>';
+}
+// 出力:
+// 名前: 山田、年齢: 30歳
+// 名前: 佐藤、年齢: 25歳
+// 名前: 鈴木、年齢: 35歳
+$scores = [
+    '国語' => 80,
+    '数学' => 95,
+    '英語' => 72,
+];
+
+foreach ($scores as $subject => $score) {
+    echo $subject . ': ' . $score . '点<br>';
+}
+// 出力:
+// 国語: 80点
+// 数学: 95点
+// 英語: 72点
 
 ?>
 </body>
